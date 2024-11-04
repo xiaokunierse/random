@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸运儿😊</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        select {
+            position: fixed;
+            background: #fafdfe;
+            height: 28px;
+            width: 120px;
+            line-height: 28px;
+            border: 1px solid #9bc0dd;
+            border-radius: 2px;
+            left: 30px;
+            top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="random-count">
+        <option value="1">1个幸运儿</option>
+        <option value="2">2个幸运儿</option>
+        <option value="3">3个幸运儿</option>
+        <option value="4">4个幸运儿</option>
+        <option value="5">5个幸运儿</option>
+    </select>
+    <div class="container">
+        <h1>幸运儿🤣</h1>
+
+        <div id="results"></div>
+        <label for="random-count"></label>
+
+        <div class="seat-group" id="left-group">
+            <h2></h2>
+            <div class="seats" data-group="left"></div>
+        </div>
+        <div class="seat-group" id="middle-group">
+            <h2></h2>
+            <div class="seats" data-group="middle"></div>
+        </div>
+        <div class="seat-group" id="right-group">
+            <h2></h2>
+            <div class="seats" data-group="right"></div>
+        </div>
+
+
+    </div>
+
+    <button id="start-random">谁是幸运儿？</button>
+
+    <div class="footer">
+        <p>&#169; ZHUSHAOKUN</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
