@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
  // 创建座位
 const createSeats = () => {
     seatGroups.forEach(group => {
-        for (let i = 1; i <= 18; i++) {
+        for (let i = 1; i <= 21; i++) {
             const seat = document.createElement('div');
             seat.classList.add('seat');
             seat.textContent = `座位 ${i}`;
