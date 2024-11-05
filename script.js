@@ -47,22 +47,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 selectedSeats.push(allSeats[randomIndex]);
             }
         }
-            // 为排除座位添加动画效果
-    excludedSeats.forEach(index => {
-        const excludedSeat = allSeats[index];
-        excludedSeat.classList.add('excluded');  // 添加排除样式
-    });
 
         // 为随机选择的座位添加高亮
         selectedSeats.forEach(seat => {
             seat.classList.add('highlight');
         });
+        // 为排除座位添加动画效果
+        excludedSeats.forEach(index => {
+            const excludedSeat = allSeats[index];
+            excludedSeat.classList.add('excluded');  // 添加排除样式
+        });
 
-        // 显示结果
         resultsDiv.innerHTML = '随机结果: ' + selectedSeats.map(seat => seat.textContent).join(', ');
     };
 
-    // 按钮点击时执行
     startButton.addEventListener('click', () => {
         resultsDiv.innerHTML = '';
 
