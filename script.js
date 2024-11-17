@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 seat.textContent = `座位 ${i}`;
                 if (excludedSeats.includes(seatIndex)) {
                     seat.classList.add('excluded');
-                    seat.textContent = "无";
+                    seat.textContent = "x";
                 }
                 group.appendChild(seat);
             }
