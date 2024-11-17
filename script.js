@@ -13,6 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
         (2 * 21) + 1,
         (2 * 21) + 2,
     ];
+    // 把 excludedSeats 存储到 localStorage 中
+    localStorage.setItem('excludedSeats', JSON.stringify(excludedSeats));
+
+        // 监听自定义更新事件
+    window.addEventListener('updateExcludedSeats', function (event) {
+        const newExcludedSeats = event.detail;
+        if (Array.isArray(newExcludedSeats)) {
+            excludedSeats.length = 0;  // 先清空原数组
+            excludedSeats.push(...newExcludedSeats);  // 填充新数据
+            localStorage.setItem('excludedSeats', JSON.stringify(excludedSeats));  // 更新 localStorage 里的数据
+        }
+    });
 
     // 标记是否是最终选择
     let isFinalSelection = false;
